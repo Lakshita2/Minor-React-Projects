@@ -15,16 +15,16 @@ const items = [
   function App() {
     return (
       <div className="App"  >
-        
+        <h2>Welcome To My Blog</h2>
         <ul>
             {
               items.map((item)=> <li key={item.title}>
                 <div className="card text-center">
-                <div className="card-body">
+                
                 <h3>{item.title} </h3>
                 <p>{item.description}</p>
                 </div>
-                </div> 
+                
                 </li>)
             }
         </ul>
