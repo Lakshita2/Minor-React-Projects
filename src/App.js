@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+const items = [
+  {
+    title: "My new Website",
+    description: "written by Mario"
+  },
+  {
+    title: "Welcome Party!",
+    description: "written by yash"
+  }
+  ]
+  
+  function App() {
+    return (
+      <div className="App"  >
+        
+        <ul>
+            {
+              items.map((item)=> <li key={item.title}>
+                <div className="card text-center">
+                <div className="card-body">
+                <h3>{item.title} </h3>
+                <p>{item.description}</p>
+                </div>
+                </div> 
+                </li>)
+            }
+        </ul>
+        
+        
+      </div>
+    );
+  }
+  
+  export default App;
+  
